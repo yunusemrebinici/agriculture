@@ -1,4 +1,6 @@
-
+#Veritabanı Kurulumu
+Bu proje, bir SQL Server veritabanı kullanmaktadır. Veritabanının şeması ve başlangıç verileri, /agriculture/AGscript.sql dosyasında bulunmaktadır.
+Data katmanında gerekli bağlantı yollarını değiştirip , yukarıdaki şemayı entegre edip projeyi /agriculture/Controllers/LoginController`dan ayağa kaldırabilirsiniz.
 
 ## GÖRSELLER
 ![image alt](https://github.com/yunusemrebinici/agriculture/blob/master/Proje_G%C3%B6rselleri/1.jpg)
