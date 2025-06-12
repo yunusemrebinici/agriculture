@@ -1,0 +1,35 @@
+﻿@model EntityLayer.Concrete.Image
+@{
+	ViewData["Title"] = "EditImage";
+	Layout = "~/Views/Shared/_AdminLayout2.cshtml";
+}
+<div class="col-lg-12 grid-margin stretch-card">
+	<div class="card">
+		<div class="card-body">
+			<h4 class="card-title">Düzenleme Sayfası</h4>
+			<form method="post">
+				@Html.HiddenFor(x => x.ImageID)
+
+				@Html.Label("Başlık")
+				<input type="text" asp-for="Title" class="form-control" />
+				@Html.ValidationMessageFor(x => x.Title, "", new { @class = "text-danger" })
+				<br />
+
+				@Html.Label("Açıklama ")
+				<input type="text" asp-for="Description" class="form-control" />
+				<span asp-validation-for="Description" class="text-danger"></span>
+				<br />
+
+				@Html.Label("Fotoğraf Yolu")
+				<input type="text" asp-for="ImageUrl" class="form-control" />
+				@Html.ValidationMessageFor(x => x.ImageUrl,"",new { @class = "text-warning" })
+				<br />
+
+				<button type="submit" class="btn btn-info">Güncelle</button>
+
+			</form>
+		</div>
+	</div>
+</div>
+
+

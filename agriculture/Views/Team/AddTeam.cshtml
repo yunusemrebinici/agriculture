@@ -1,0 +1,54 @@
+﻿@model EntityLayer.Concrete.Team
+@{
+	ViewData["Title"] = "AddTeam";
+	Layout = "~/Views/Shared/_AdminLayout2.cshtml";
+}
+
+<div class="col-lg-12 grid-margin stretch-card">
+	<div class="card">
+		<div class="card-body">
+			<h1 class="card-title">Yeni Takım Arkadaşı Ekleme</h1>
+			<form method="post">
+
+				@Html.Label("İsim")
+				@Html.TextAreaFor(x => x.PersonName,new { @class = "form-control" })
+				@Html.ValidationMessageFor(x => x.PersonName)
+				<br />
+				@Html.Label("Görev ")
+				@Html.TextAreaFor(x => x.Title, new { @class = "form-control" })
+				@Html.ValidationMessageFor(x => x.Title )
+				<br />
+				<br />
+				@Html.Label("Fotoğraf Yolu")
+				@Html.TextAreaFor(x => x.ImageUrl, new { @class = "form-control" })
+				@Html.ValidationMessageFor(x => x.ImageUrl)
+				<br />
+				<br />
+				@Html.Label("Facebook Adresi")
+				@Html.TextAreaFor(x => x.FacebookUrl, new { @class = "form-control" })
+				@Html.ValidationMessageFor(x => x.FacebookUrl)
+				<br />
+				<br />
+				@Html.Label("İnstagram Adresi")
+				@Html.TextAreaFor(x => x.InstagramUrl, new { @class = "form-control" })
+				@Html.ValidationMessageFor(x => x.InstagramUrl)
+				<br />
+				<br />
+				@Html.Label("Web Adresi")
+				@Html.TextAreaFor(x => x.WebSiteUrl, new { @class = "form-control" })
+				@Html.ValidationMessageFor(x => x.WebSiteUrl)
+				<br />
+				<br />
+				@Html.Label("X Adresi")
+				@Html.TextAreaFor(x => x.TwitterUrl, new { @class = "form-control" })
+				@Html.ValidationMessageFor(x => x.TwitterUrl)
+				<br />
+				<br />
+
+				<button class="btn btn-info">Ekle</button>
+
+			</form>
+		</div>
+	</div>
+</div>
+

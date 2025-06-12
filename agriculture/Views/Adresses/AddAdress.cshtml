@@ -1,0 +1,53 @@
+﻿@model EntityLayer.Concrete.Address
+@{
+    ViewData["Title"] = "AddAdress";
+    Layout = "~/Views/Shared/_AdminLayout2.cshtml";
+}
+
+<div class="col-lg-12 grid-margin stretch-card">
+	<div class="card">
+		<div class="card-body">
+			<h1 class="card-title">Adres Ekleme</h1>
+			<form class="forms-sample" method="post">
+
+				<div class="form-group">
+					<label>İkametkah</label>
+					<input type="text" asp-for="Description1" class="form-control" />
+					<span asp-validation-for="Description1" class="text-danger"></span>
+				</div>
+				<br />
+
+				<div class="form-group">
+					<label>Şehir</label>
+					<textarea asp-for="Description2" class="form-control"> </textarea>
+					<span asp-validation-for="Description2" class="text-danger"></span>
+				</div>
+				<br />
+
+				<div class="form-group">
+					<label>Posta Kodu</label>
+					<textarea asp-for="Description3" class="form-control"> </textarea>
+					<span asp-validation-for="Description3" class="text-danger"></span>
+				</div>
+				<br />
+
+				<div class="form-group">
+					<label>Telefon Numarası</label>
+					<textarea  asp-for="Description4" class="form-control"> </textarea>
+					<span asp-validation-for="Description4" class="text-danger"></span>
+				</div>
+				<br />
+
+				<div class="form-group">
+					<label>Map Bilgisi</label>
+					<textarea  asp-for="Mapİnfo" class="form-control"> </textarea>
+					<span asp-validation-for="Mapİnfo" class="text-danger"></span>
+				</div>
+				<br />
+
+				<button class="btn btn-info">Ekle</button>
+
+			</form>
+		</div>
+	</div>
+</div>
